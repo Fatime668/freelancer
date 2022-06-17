@@ -1,0 +1,17 @@
+﻿@model Portfolio
+<div>
+    <div>
+        <p>Id</p>
+        <p>@Model.Id</p>
+    </div>
+    <div class="my-3">
+        <p>Image</p>
+        <img width="150" src="~/assets/image/@Model.Image" />
+    </div>
+    <div>
+        <form method="post">
+            <button class="btn btn-outline-success" asp-controller="portfolio" asp-action="index">back to index</button>
+        </form>
+    </div>
+</div>
+

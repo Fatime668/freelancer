@@ -1,0 +1,66 @@
+﻿@model HomeVM
+@*@section Links{
+        <style>
+            .dropdown{
+                visibility:hidden;
+            }
+        </style>
+
+    }*@
+<!-- header start -->
+<header>
+    <nav>
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="nav-logo">
+                        <a href="#">@Model.Setting.HeaderLogo</a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="nav-menu ">
+                        <ul class="d-flex list-unstyled justify-content-end m-0 p-0">
+                            <li><a href="#">portfolio</a></li>
+                            <li class="ms-5"><a href="#">about</a></li>
+                            <li class="ms-5"><a href="#">contact</a></li>
+                            <li class="drop ms-5" style="position:relative;">
+                                <a href="#"><i class="fa-solid fa-user"></i></a>
+                                <ul class="dropdown list-unstyled" style="position:absolute;background-color:#0094ff;height:100px;width:100px;padding:10px ">
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <li><a style="text-transform:capitalize" href="#">@(User.Identity.Name)</a></li>
+
+
+                                        <li><a style="text-transform:capitalize"  href="#">Logout</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a style="text-transform:capitalize"  href="#" >Register</a></li>
+                                        <li><a style="text-transform:capitalize"  href="#" >Login</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bar justify-content-end">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="navbar d-none">
+            <div class="close">
+                <i class="fa-solid fa-xmark d-flex justify-content-end"></i>
+
+            </div>
+            <ul class="m-0 p-0 list-unstyled">
+
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- header end -->

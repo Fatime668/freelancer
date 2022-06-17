@@ -1,0 +1,9 @@
+﻿@model Portfolio
+<form class="form-control" method="post" enctype="multipart/form-data">
+    <div>
+        <label >Image</label><br />
+        <input class="form-control" asp-for="Photo" accept="image/*" /><br />
+        <span class="text-danger" asp-validation-for="Photo"></span>
+    </div>
+    <button class="submit btn btn-lg btn-primary">Create Image</button>
+</form>

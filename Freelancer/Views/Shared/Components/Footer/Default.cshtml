@@ -1,0 +1,43 @@
+﻿@model HomeVM
+<!-- footer start -->
+<footer class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="location">
+                    <h4>
+                        Location
+                    </h4>
+                    <p>@Model.Setting.Location</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="around">
+                    <h4>AROUND THE WEB</h4>
+                    <div class="icons">
+                        <ul class="d-flex m-0 p-0 justify-content-center list-unstyled">
+                            @foreach (var item in Model.SocialMedias)
+                            {
+                                <li><a href="@item.IconUrl"><i class="@item.Icon"></i></a></li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="about">
+                    <h4>ABOUT FREELANCER</h4>
+                    <p>
+                        @Model.Setting.About
+                        <a href="#">Start Bootstrap</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <span>Copyright © Your Website 2022</span>
+    </div>
+</footer>
+<!-- footer end -->
